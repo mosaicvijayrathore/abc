@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+@import url('style_ripple.css');
+
+select::-ms-expand {
+    display: block;
+}
+
+select{
+	appearance: none!important;
+  -webkit-appearance: none!important;
+  -moz-appearance: none!important;
+  outline: none;
+  border: none;
+}
+.abc{ width: 100px; height: 50px; background: #ccc; color: #000;}
+.abc:hover{ background: #000;}
+</style>
+</head>
+
+<body>
+  <span class="abc">asdas</span>
+<!-- <label for="select">Select:</label>
+<select name="select" id="select">
+<option>sadf sdfsd</option>
+<option>sadf sdfsd</option>
+<option>sadf sdfsd</option>
+<option>sadf sdfsd</option>
+<option>sadf sdfsd</option>
+</select> -->
+
+<button class="searchformButton col-xs-4 rippleGrey">
+	<span class="drop" style="height: 97px; width: 97px; top: -22.5px; left: 23.9219px;"></span>
+</button>
+
+<script type="text/javascript">
+function ripple_click() {
+	var row = (this);
+     $(row).children().addClass('rippleBig');
+}
+	$('.searchformButton').click(ripple_click);
+
+</script>
+</body>
+</html>
